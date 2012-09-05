@@ -13,10 +13,19 @@ namespace SQLAssist
          * Return will be INSERT INTO <tablename> (field1, field2, field3, field4, etc) VALUES('strvalue1','strvalue2',numvalue,NULL, etc)
          
          */
-        string ConvertToInsert()
+        string ConvertToInsert(string tablename, string[] fields, string[] values)
         {
+            string insertSyntax = "INSERT INTO %1 (%2) VALUES (%3)";
 
-            return null;
+            string fieldsFormatted = FormatToDelimited(fields);
+            string valuesFormatted = FormatToDelimited(values);
+
+            return string.Format(insertSyntax, tablename, fieldsFormatted, valuesFormatted);
+        }
+
+        string FormatToDelimited(string[] input)
+        {
+            return input.ToString();
         }
     }
 }
