@@ -11,6 +11,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using SQLAssist.VerticalViewer;
+using SQLAssist.Classes;
 
 namespace SQLAssist
 {
@@ -22,6 +24,8 @@ namespace SQLAssist
 		public MainWindow()
 		{
 			InitializeComponent();
+
+			verticalViewer.Items.Add(new DataCellViewer(new SQLDataCell { ColumnName = "Column", CellValue = "Val", DataType = "string" }));
 		}
 	}
 }
