@@ -56,6 +56,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Classes\SQLDataCell.cs" />
+    <Compile Include="Classes\SQLDataTable.cs" />
+    <Compile Include="Classes\SQLDataTableTranslator.cs" />
     <Compile Include="SQLParser.cs" />
     <Compile Include="VerticalViewer\DataCellViewer.cs" />
     <Compile Include="VerticalViewer\VerticalViewer.cs" />
